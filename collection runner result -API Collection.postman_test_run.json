@@ -1,0 +1,720 @@
+{
+	"id": "3363a899-e965-4b07-be2f-59ec8c75a840",
+	"name": "API Collection",
+	"timestamp": "2022-11-24T12:11:37.830Z",
+	"collection_id": "20586959-5256d1cf-cbfd-453b-ba81-2c2f49c7e41f",
+	"folder_id": 0,
+	"environment_id": "20586959-0aa28d96-fa0f-4b30-827a-07a3745f18fa",
+	"totalPass": 58,
+	"totalFail": 9,
+	"results": [
+		{
+			"id": "38bf4f11-8846-464d-9a6b-f66f172d7276",
+			"name": "Get All Entries",
+			"url": "https://demo.fusio-project.org/index.php",
+			"time": 558,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Expected fail - Status code should be 201 instead of 200": false,
+				"Status code should be 200": true,
+				"expected fail - Status code name should have a string Created instead of OK": false,
+				"Status code name should have a string OK": true,
+				"Response time is more than 200ms": true,
+				"check paymentCurrency is eur": true,
+				"Body response lnk 1 should be rel": true,
+				"Body response lnk 3 should be href": true,
+				"Body response lnk 5's rel should be jsonpic": true,
+				"expected fail-Body response lnk 5's rel should be json1 instead of jsonpic": false,
+				"Body should have health": true,
+				"entire body should include links": true
+			},
+			"testPassFailCounts": {
+				"Expected fail - Status code should be 201 instead of 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail - Status code name should have a string Created instead of OK": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code name should have a string OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is more than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check paymentCurrency is eur": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response lnk 1 should be rel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response lnk 3 should be href": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response lnk 5's rel should be jsonpic": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Body response lnk 5's rel should be json1 instead of jsonpic": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body should have health": {
+					"pass": 1,
+					"fail": 0
+				},
+				"entire body should include links": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				558
+			],
+			"allTests": [
+				{
+					"Expected fail - Status code should be 201 instead of 200": false,
+					"Status code should be 200": true,
+					"expected fail - Status code name should have a string Created instead of OK": false,
+					"Status code name should have a string OK": true,
+					"Response time is more than 200ms": true,
+					"check paymentCurrency is eur": true,
+					"Body response lnk 1 should be rel": true,
+					"Body response lnk 3 should be href": true,
+					"Body response lnk 5's rel should be jsonpic": true,
+					"expected fail-Body response lnk 5's rel should be json1 instead of jsonpic": false,
+					"Body should have health": true,
+					"entire body should include links": true
+				}
+			]
+		},
+		{
+			"id": "8950a40e-f196-4589-af47-faf6c200169d",
+			"name": "Get Books - All",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 867,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status code name has string OK": true,
+				"Search for a book name called Viscount Who Loved Me": true,
+				"confirm that entry 0 id is 1": true,
+				"confirm that entry 1 type is non fiction": true,
+				"Body match has the vanishing half": true,
+				"The id number of a fiction book that available with the name The Midnight Library is ": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search for a book name called Viscount Who Loved Me": {
+					"pass": 1,
+					"fail": 0
+				},
+				"confirm that entry 0 id is 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"confirm that entry 1 type is non fiction": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body match has the vanishing half": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The id number of a fiction book that available with the name The Midnight Library is ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				867
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status code name has string OK": true,
+					"Search for a book name called Viscount Who Loved Me": true,
+					"confirm that entry 0 id is 1": true,
+					"confirm that entry 1 type is non fiction": true,
+					"Body match has the vanishing half": true,
+					"The id number of a fiction book that available with the name The Midnight Library is ": true
+				}
+			]
+		},
+		{
+			"id": "de3ae734-4456-49c7-a3e7-af80c85de9ea",
+			"name": "Get Books - fictions",
+			"url": "https://simple-books-api.glitch.me/books?response",
+			"time": 195,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Confirm that the response 3 type is fiction": true,
+				"confirm that entry 0 id is 1": true,
+				"expected fail-confirm that entry 1 name is the vanishing half instead of Just as i am": false,
+				"Body match has the vanishing half": true,
+				"The id number of a fiction book that available with the name The Midnight Library is ": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Confirm that the response 3 type is fiction": {
+					"pass": 1,
+					"fail": 0
+				},
+				"confirm that entry 0 id is 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-confirm that entry 1 name is the vanishing half instead of Just as i am": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body match has the vanishing half": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The id number of a fiction book that available with the name The Midnight Library is ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				195
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Confirm that the response 3 type is fiction": true,
+					"confirm that entry 0 id is 1": true,
+					"expected fail-confirm that entry 1 name is the vanishing half instead of Just as i am": false,
+					"Body match has the vanishing half": true,
+					"The id number of a fiction book that available with the name The Midnight Library is ": true
+				}
+			]
+		},
+		{
+			"id": "cc843a27-89aa-4625-94d8-09f7edd75b5b",
+			"name": "Get Books - non fiction",
+			"url": "https://simple-books-api.glitch.me/books?[object%20Object],[object%20Object],[object%20Object],[object%20Object],[object%20Object],[object%20Object]",
+			"time": 206,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"expected fail-Search for a book name called Viscount Who Loved Me": false,
+				"confirm that entry 0 id is 1": true,
+				"confirm that entry 1 name is Just as I Am": true,
+				"Body match has just as i am": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Search for a book name called Viscount Who Loved Me": {
+					"pass": 0,
+					"fail": 1
+				},
+				"confirm that entry 0 id is 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"confirm that entry 1 name is Just as I Am": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body match has just as i am": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				206
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"expected fail-Search for a book name called Viscount Who Loved Me": false,
+					"confirm that entry 0 id is 1": true,
+					"confirm that entry 1 name is Just as I Am": true,
+					"Body match has just as i am": true
+				}
+			]
+		},
+		{
+			"id": "1c9fde5b-0799-4a77-b93c-147b0c55e2b7",
+			"name": "Place a book order",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 225,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Status code name has Created": true,
+				"expected fail-Response time must not be more than 400ms": true,
+				"Body matches has created": true,
+				"Body matches has orderId": true,
+				"response must have created to be true": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Response time must not be more than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches has created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches has orderId": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response must have created to be true": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				225
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Status code name has Created": true,
+					"expected fail-Response time must not be more than 400ms": true,
+					"Body matches has created": true,
+					"Body matches has orderId": true,
+					"response must have created to be true": true
+				}
+			]
+		},
+		{
+			"id": "bdf8fa39-39ce-474a-9643-a72688493217",
+			"name": "Place a book order 2",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 219,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code should be 201 or 202": true,
+				"Status code name should be Created": true,
+				"expected fail-Response time is less than 401ms": true,
+				"Body response must contain created": true,
+				"Response must have created to be true": true,
+				"Body response must have orderId": true,
+				"expected fail - Response must have created to be false": false
+			},
+			"testPassFailCounts": {
+				"Status code should be 201 or 202": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name should be Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Response time is less than 401ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response must contain created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must have created to be true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response must have orderId": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail - Response must have created to be false": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				219
+			],
+			"allTests": [
+				{
+					"Status code should be 201 or 202": true,
+					"Status code name should be Created": true,
+					"expected fail-Response time is less than 401ms": true,
+					"Body response must contain created": true,
+					"Response must have created to be true": true,
+					"Body response must have orderId": true,
+					"expected fail - Response must have created to be false": false
+				}
+			]
+		},
+		{
+			"id": "f6aec525-ffcf-4f14-bce6-905b86871d8e",
+			"name": "Place a book order 3",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 312,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code should be 201 or 202": true,
+				"Status code name should be Created": true,
+				"expected fail-Response time is less than 401ms": true,
+				"Body response must contain created": true,
+				"Response must have created to be true": true,
+				"Body response must have orderId": true,
+				"expected fail - Response must have created to be false": false
+			},
+			"testPassFailCounts": {
+				"Status code should be 201 or 202": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name should be Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Response time is less than 401ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response must contain created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must have created to be true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response must have orderId": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail - Response must have created to be false": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				312
+			],
+			"allTests": [
+				{
+					"Status code should be 201 or 202": true,
+					"Status code name should be Created": true,
+					"expected fail-Response time is less than 401ms": true,
+					"Body response must contain created": true,
+					"Response must have created to be true": true,
+					"Body response must have orderId": true,
+					"expected fail - Response must have created to be false": false
+				}
+			]
+		},
+		{
+			"id": "4e3ee850-7679-4b81-ba58-1ffb012ccb14",
+			"name": "Get all orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 201,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status code name has OK": true,
+				"expected fail-Response time is not more than 400ms": true,
+				"Body must have bookId, id and customerName": true,
+				"Body response 0 must have bookId, id and customerName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Response time is not more than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body must have bookId, id and customerName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response 0 must have bookId, id and customerName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				201
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status code name has OK": true,
+					"expected fail-Response time is not more than 400ms": true,
+					"Body must have bookId, id and customerName": true,
+					"Body response 0 must have bookId, id and customerName": true
+				}
+			]
+		},
+		{
+			"id": "b94fb4c8-6dad-429f-990b-cb092687cf3b",
+			"name": "Get an order",
+			"url": "https://simple-books-api.glitch.me/orders/TpZ8eXHG8NsLPTm-xMzNF?bookId=5",
+			"time": 200,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {
+				"Status code is 422": true,
+				"Status code name has Unprocessable entit": true,
+				"Response time is not more than 400ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has Unprocessable entit": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is not more than 400ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				200
+			],
+			"allTests": [
+				{
+					"Status code is 422": true,
+					"Status code name has Unprocessable entit": true,
+					"Response time is not more than 400ms": true
+				}
+			]
+		},
+		{
+			"id": "41d92468-d84e-48eb-9d9f-708cd9c9b519",
+			"name": "Delete an order",
+			"url": "https://simple-books-api.glitch.me/orders/ffX08T2RZaXtcFONIfgdh",
+			"time": 565,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Status code name has string No content": true,
+				"expected fail-Response time is not more than 400ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string No content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail-Response time is not more than 400ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				565
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Status code name has string No content": true,
+					"expected fail-Response time is not more than 400ms": false
+				}
+			]
+		},
+		{
+			"id": "34d14c19-1706-4bd9-9a3f-b714840ae821",
+			"name": "Delete an order 2",
+			"url": "https://simple-books-api.glitch.me/orders/TpZ8eXHG8NsLPTm-xMzNF",
+			"time": 413,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Status code name has string No content": true,
+				"Response time is not more than 400ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string No content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is not more than 400ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				413
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Status code name has string No content": true,
+					"Response time is not more than 400ms": false
+				}
+			]
+		},
+		{
+			"id": "98a176b9-8927-432c-ba63-fab8024a5e04",
+			"name": "Delete an order 3",
+			"url": "https://simple-books-api.glitch.me/orders/fzuCsrPiBc7PfpKLBZ2J5",
+			"time": 208,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Status code name has string No content": true,
+				"expected fail- Response time is not more than 400ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string No content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"expected fail- Response time is not more than 400ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				208
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Status code name has string No content": true,
+					"expected fail- Response time is not more than 400ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 4169,
+	"collection": {
+		"requests": [
+			{
+				"id": "38bf4f11-8846-464d-9a6b-f66f172d7276",
+				"method": "GET"
+			},
+			{
+				"id": "8950a40e-f196-4589-af47-faf6c200169d",
+				"method": "GET"
+			},
+			{
+				"id": "de3ae734-4456-49c7-a3e7-af80c85de9ea",
+				"method": "GET"
+			},
+			{
+				"id": "cc843a27-89aa-4625-94d8-09f7edd75b5b",
+				"method": "GET"
+			},
+			{
+				"id": "1c9fde5b-0799-4a77-b93c-147b0c55e2b7",
+				"method": "POST"
+			},
+			{
+				"id": "bdf8fa39-39ce-474a-9643-a72688493217",
+				"method": "POST"
+			},
+			{
+				"id": "f6aec525-ffcf-4f14-bce6-905b86871d8e",
+				"method": "POST"
+			},
+			{
+				"id": "4e3ee850-7679-4b81-ba58-1ffb012ccb14",
+				"method": "GET"
+			},
+			{
+				"id": "b94fb4c8-6dad-429f-990b-cb092687cf3b",
+				"method": "GET"
+			},
+			{
+				"id": "41d92468-d84e-48eb-9d9f-708cd9c9b519",
+				"method": "DELETE"
+			},
+			{
+				"id": "34d14c19-1706-4bd9-9a3f-b714840ae821",
+				"method": "DELETE"
+			},
+			{
+				"id": "98a176b9-8927-432c-ba63-fab8024a5e04",
+				"method": "DELETE"
+			}
+		]
+	}
+}
